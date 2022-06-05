@@ -4,7 +4,7 @@ const API_KEY = 'AIzaSyBD55Brj7z6BOCCYCk2H1niyLHQdZOZEI0'
 const DISCOVERY_URL = 'https://commentanalyzer.googleapis.com/$discovery/rest?version=v1alpha1'
 
 
-const postPerspectiveApi = (tweet) => {
+export const postPerspectiveApi = (tweet) => {
   google.discoverAPI(DISCOVERY_URL)
     .then(client => {
       const analyzeRequest = {
@@ -31,5 +31,3 @@ const postPerspectiveApi = (tweet) => {
       throw err
     })
 }
-
-postPerspectiveApi('Concordo com vc meu amigo')
