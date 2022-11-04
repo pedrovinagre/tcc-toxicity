@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    container_name: tcc-toxicity-postgres
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    networks:
+      - tcc-toxicity-network
+
+  postgres-tests:
+    image: postgres
+    container_name: tcc-toxicity-postgres-tests
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5433:5432"
+    networks:
+      - tcc-toxicity-network
+
+networks:
+  tcc-toxicity-network:
+
+volumes:
+  tcc-toxicity-volume:
