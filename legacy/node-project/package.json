@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "googleapis": "^100.0.0",
+    "jquery-csv": "^1.0.21",
+    "twitter-api-v2": "^1.12.7"
+  },
+  "scripts": {
+    "env": "node -r dotenv/config"
+  }
+}
