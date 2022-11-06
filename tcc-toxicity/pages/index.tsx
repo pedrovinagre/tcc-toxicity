@@ -36,17 +36,17 @@ export default function Home() {
           </div>
 
           <a
-            href={`${process.env.NEXT_PUBLIC_PROJECT_URL}/api/query-string`}
+            href={`${process.env.NEXT_PUBLIC_PROJECT_URL}/api/query`}
             className={styles.card}
           >
             <h2>Ler Query String</h2>
-            <code className={styles.code}>GET api/query-string</code>
+            <code className={styles.code}>GET api/query</code>
             <p>Adquire a atual frase sendo buscada em tweets para classificação.</p>
           </a>
 
           <div className={styles.card}>
             <h2>Atualizar Query String</h2>
-            <code className={styles.code}>POST api/query-string</code>
+            <code className={styles.code}>POST api/query</code>
             <p>Atualiza a atual frase sendo buscada em tweets para classificação. Corpo:</p>
             <code className={styles.codeDesc}>{'{ query: string }'}</code>
           </div>
